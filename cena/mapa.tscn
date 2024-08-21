@@ -1,0 +1,45 @@
+[gd_scene load_steps=5 format=3 uid="uid://c4rb7twoa2y7g"]
+
+[ext_resource type="Texture2D" uid="uid://sqerjpcv5hvc" path="res://sprite/platforms.png" id="1_1nj7w"]
+[ext_resource type="PackedScene" uid="uid://bo3u65qyt6tnp" path="res://cena/player.tscn" id="2_8om4r"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_imjqy"]
+texture = ExtResource("1_1nj7w")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:3/0 = 0
+0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:3/0 = 0
+1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:3/0 = 0
+2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSet" id="TileSet_ve5jp"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_imjqy")
+
+[node name="mapa" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_ve5jp")
+format = 2
+layer_0/tile_data = PackedInt32Array(2359296, 65536, 0, 2359297, 131072, 0, 2359299, 65536, 0, 2359300, 131072, 0, 2359302, 65536, 0, 2359303, 131072, 0, 2359305, 65536, 0, 2359306, 131072, 0, 2359308, 65536, 0, 2359309, 131072, 0, 2359311, 65536, 0, 2359312, 131072, 0, 2359314, 65536, 0, 2359315, 131072, 0, 2359318, 65536, 0, 2359319, 131072, 0, 2293780, 0, 0, 2293781, 0, 0, 2293777, 0, 0, 2293774, 0, 0, 2293771, 0, 0, 2293768, 0, 0, 2293765, 0, 0, 2293762, 0, 0)
+
+[node name="personagem" parent="." instance=ExtResource("2_8om4r")]
+position = Vector2(15, 555)
